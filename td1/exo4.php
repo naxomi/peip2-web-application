@@ -6,15 +6,23 @@
 	# - premier(13) -> 13
 	# - premier(35) -> 5
 	function premier($N) {
-
-	}
+        for ($i = 2; $i <= $N; $i++) {
+            if ($N % $i == 0) {
+                return $i;
+            }
+        }
+    }
 
 	# retourne une chaîne de caractères du type :
 	# - "Le nombre N est premier" si '$N' est premier
 	# - "Le nombre N n'est pas premier car multiple de D"
 	#   si '$N' est divisible par un nombre D (et donc, pas premier)
 	function resultat($N) {
-
+        $result = premier($N);
+        if ($result == $N) {
+            return "Le nombre {$N} est premier";
+        }
+        return "Le nombre {$N} n'est pas premier car multiple de {$result}";
 	}
 
 	
@@ -32,7 +40,11 @@
 	<body>
 		<h1>TP 1 - Exo 4</h1>
 		<hr>
-		<h2> </h2>
+		<h2>
+		    <?php
+		        echo resultat($_GET["nombre"]);
+		    ?>
+		</h2>
 		<a class="bouton" href="exo4.html">Autre test</a>
 	</body>
 </html>

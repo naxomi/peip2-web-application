@@ -4,9 +4,19 @@
 	# d'une table contenant les diviseurs de '$N'
 	# (une seule ligne, autant de colonnes que de diviseurs)
 	function diviseurs($N) {
+        $divisor_list = array();
+        for ($i = 1; $i <= $N; $i++) {
+            if ($N % $i == 0) {
+                $divisor_list[] = $i;
+            }
+        }
+        $output = "<table><tr>";
 
+        foreach ($divisor_list as $divisor) {
+            $output .= "<td>{$divisor}</td>";
+        }
+        return $output;
 	}
-
 	
 ?>
 <!DOCTYPE html>
@@ -22,7 +32,11 @@
 	<body>
 		<h1>TP 1 - Exo 3</h1>
 		<hr>
-		<h2> </h2>
+		<h2>
+		    <?php
+		        echo diviseurs($_GET["n"]);
+		    ?>
+		</h2>
 
 	</body>
 </html>
