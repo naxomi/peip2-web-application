@@ -10,12 +10,12 @@
                 $divisor_list[] = $i;
             }
         }
-        $output = "<table><tr>";
+        $output = "<table class='exo4'><tr>";
 
         foreach ($divisor_list as $divisor) {
             $output .= "<td>{$divisor}</td>";
         }
-        return $output;
+        return $output . "</tr></table>";
 	}
 	
 ?>
