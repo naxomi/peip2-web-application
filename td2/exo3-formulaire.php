@@ -19,7 +19,7 @@
 		<form action="exo3-action.php" method="get">
 			Choisissez un pays :
 <?php
-			echo makeRadio($INFO,"codepays");
+			echo makeRadio( INFO,"codepays");
 ?>
 			<input type="submit" value="Afficher les informations">
 		</form>
