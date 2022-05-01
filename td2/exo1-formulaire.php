@@ -19,7 +19,7 @@ include("exo1.inc.php");
 <form action="exo1-action.php" method="get">
     Choisissez la langue :
     <?php
-    echo makeRadio($LANGUE, "langue");
+    echo makeRadio(LANGUE, "langue");
     ?>
     <input type="submit" value="Afficher la date">
 </form>
