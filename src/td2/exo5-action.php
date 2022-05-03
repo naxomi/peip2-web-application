@@ -30,7 +30,11 @@ include("exo5.inc.php");
         <th>Moyenne</th>
     </tr>
     <?php
-
+    if (isset($_GET["nom"])) {
+        echo table_content($_GET["nom"], STUDENT_FILE, SCORE_FILE);
+    } else {
+        echo table_content("", STUDENT_FILE, SCORE_FILE);
+    }
     ?>
 </table>
 
