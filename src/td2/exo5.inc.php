@@ -6,7 +6,7 @@
 function normalize($nom): string
 {
     $nom = (string)$nom;
-    return strtoupper(substr($nom, 0, 1)) . strtolower(substr($nom, 1));;
+    return strtoupper(substr($nom, 0, 1)) . strtolower(substr($nom, 1));
 }
 
 // lit le fichier '$student_file' et retourne un tableau
